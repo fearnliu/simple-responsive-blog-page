@@ -1,0 +1,80 @@
+/*
+ * 页面样式布局，采用移动优先
+ *
+*/
+
+.nav-list-item a {
+    color: white;
+    display: block;
+    padding: 20px 40px;
+}
+
+.nav-list-item:hover > ul {
+    display: block;
+}
+
+.nav-submenu-list {    /* 移动端，导航项独占一行，无需额外布局 */
+    background-color: #2b5553;
+    display: none;
+}
+
+
+/* 按钮部分样式 */
+.menu-btn {
+    border: none;
+    padding: 8px 0;
+}
+
+.menu-btn::after {    /* 清除浮动，以使子元素撑开容器 */
+    content: "";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.icon-close {    /* 导航栏关闭 */
+    background: url("../../assets/images/icon-close.png") no-repeat center center;
+}
+
+.icon-menu {    /* 导航栏展开 */
+    background: url("../../assets/images/icon-menu.png") no-repeat center center;
+}
+
+.menu-btn-icon {    /* 图标的容器 */
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;    /* 保证背景图片始终覆盖容器 */
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
+/* 进行媒体查询，保证移动优先 */
+
+@media all and (min-width: 480px) {    /* 视口宽度大于 480px 时，则采用 PC 端样式 */
+    .menu-btn {    /* 正常显示导航菜单，无需展开关闭按钮 */
+        padding: 0;
+        display: none;
+    }
+
+    .nav-list-item {    /* PC端，导航项并列一行 */
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-submenu-list {    /* 子导航菜单栏采用绝对定位，默认隐藏 */
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+    .nav-container-list {    /* 为容器设置最大宽度，使多个导航菜单看起来协调美观 */
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
