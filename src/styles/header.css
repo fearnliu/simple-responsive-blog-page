@@ -1,0 +1,57 @@
+
+/* 页面 header 区域样式 */
+/* 秉承移动优先原则 */
+
+header {
+    font-size: 1.125rem;    /* 40px / 16px */
+    font-weight: 700;
+
+    margin: 0;
+
+    /*height: 80%; 并非最佳实践*/
+    height: 500px;    /* fallback hack */
+    height: 80vh;    /* vh 视口高度 */
+
+    /* 防止浏览器过高或过矮时标题被过度压缩或者拉伸 */
+    min-height: 300px;
+    max-height: 1080px;
+
+    background-image: url(../../assets/images/hader.png);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;    /* 尽可能地让图片覆盖背景容器 */
+
+    position: relative;
+}
+
+
+.header-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.header-text-container {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(34, 34, 0, .6);
+}
+
+.header-article_title {
+    /*margin-top: 0;*/
+    font-size: 2em;    /* 80px / 40px */
+}
+
+.header-article_pub {
+    display: block;
+    font-size: 1em; /* 40px / 40px */
+}
+
+@media all and (min-width: 480px) {    /* 桌面端字体稍大 */
+    /* 得益于 rem 和 em 单位，我们只需调整 header 元素的字体大小即可 */
+    header {
+        font-size: 2.5rem;    /* 40px / 16px */
+    }
+}

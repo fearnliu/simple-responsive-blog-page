@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive</title>
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css"> <!-- 引入重置样式库文件 -->
+    <link rel="stylesheet" href="./vendor/normalize.css"> <!-- 引入重置样式库文件 -->
 
     <link rel="stylesheet" href="./src/styles/nav-bar.css">
     <link rel="stylesheet" href="./src/styles/flex-nav.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
 </head>
 
 <body>
@@ -32,6 +33,13 @@
         </ul>
     </nav>
 
+    <header class="header-flex-container">
+        <div class="header-text-container">
+            <h1 class="header-article_title">我是一个非常长的巨大标题</h1>
+            <time class="header-article_pub">2017 年 3 月 1 日</time>
+        </div>
+    </header>
+    
     <script src="./src/scripts/menu_close_convert.js"></script>
 </body>
 

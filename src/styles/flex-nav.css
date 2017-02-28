@@ -17,7 +17,7 @@
 }
 
 .nav-submenu-list {
-    background-color: #144040;
+    background-color: #474f5A;
     display: none;
 }
 
@@ -82,5 +82,6 @@
         position: absolute;
         left: 0;    /* 与父级元素左对齐 */
         top: 100%;    /* 顶部与父级元素底部相接 */
+        z-index: 1000;    /* 绝对定位的元素会漂浮起来，避免被后续元素遮罩 */
     }
 }
