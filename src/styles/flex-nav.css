@@ -1,0 +1,86 @@
+
+/* 响应式布局，移动优先*/
+/* 桌面端使用优雅简洁的 flex 布局 */
+
+.nav-container-list {
+    text-align: center;    /* 移动端导航项居中排列 */
+}
+
+.nav-list-item a {
+    color: white;
+    display: block;
+    padding: 20px 40px;
+}
+
+.nav-list-item:hover > ul.nav-submenu-list {    /* 二级导航菜单项，默认隐藏，悬停可见 */
+    display: block;
+}
+
+.nav-submenu-list {
+    background-color: #144040;
+    display: none;
+}
+
+/* 按钮部分样式 */
+.menu-btn {
+    border: none;
+    padding: 8px 0;
+}
+
+.menu-btn::after {    /* 清除浮动 */
+    content: "";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.menu-btn-icon {    /* 按钮图标容器*/
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icon-close {    /* 导航栏关闭 */
+    background: url("../../assets/images/icon-close.png") no-repeat center center;
+}
+
+.icon-menu {    /* 导航栏展开 */
+    background: url("../../assets/images/icon-menu.png") no-repeat center center;
+}
+
+
+/* 媒体查询 */
+/* 桌面端采用 flex 布局 */
+@media all and (min-width: 480px) {
+    .menu-btn {    /* 桌面端没有图标按钮 */
+        padding: 0;
+        display: none;
+    }
+
+    .nav-container-list {    /* 为容器设置最大宽度，使多个导航菜单看起来协调美观 */
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .nav-flex-container {    /* flex 布局的容器 */
+        display: flex;
+        flex-direction: row;    /* 桌面端，导航栏子项目并列一行 */
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .nav-list-item {    /* 子元素绝对定位的参考 */
+        position: relative;
+    }
+
+    .nav-submenu-list {
+        position: absolute;
+        left: 0;    /* 与父级元素左对齐 */
+        top: 100%;    /* 顶部与父级元素底部相接 */
+    }
+}

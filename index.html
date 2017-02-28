@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive</title>
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css"> <!-- 引入重置样式库文件 -->
-    
+
     <link rel="stylesheet" href="./src/styles/nav-bar.css">
-    <link rel="stylesheet" href="./src/styles/mobile-priority.css">
+    <link rel="stylesheet" href="./src/styles/flex-nav.css">
 </head>
 
 <body>
@@ -16,19 +16,19 @@
         <div class="menu-btn">
             <a href="javascript:void(0)" class="menu-btn-icon icon-menu"></a>
         </div>
-        <ul class="nav-container-list">
-            <li class="nav-list-item"><a href="">首页</a></li>
-            <li class="nav-list-item">
+        <ul class="nav-container-list nav-flex-container">
+            <li class="nav-list-item nav-flex-item"><a href="">首页</a></li>
+            <li class="nav-list-item nav-flex-item">
                 <a href="">项目</a>
                 <ul class="nav-submenu-list">
-                    <li class="nav-submenu-item"><a href="">SubItem1</a></li>
-                    <li class="nav-submenu-item"><a href="">SubItem2</a></li>
-                    <li class="nav-submenu-item"><a href="">SubItem3</a></li>
-                    <li class="nav-submenu-item"><a href="">SubItem4</a></li>
+                    <li class="nav-submenu-item "><a href="">SubItem1</a></li>
+                    <li class="nav-submenu-item "><a href="">SubItem2</a></li>
+                    <li class="nav-submenu-item "><a href="">SubItem3</a></li>
+                    <li class="nav-submenu-item "><a href="">SubItem4</a></li>
                 </ul>
             </li>
-            <li class="nav-list-item"><a href="">文章</a></li>
-            <li class="nav-list-item"><a href="">关于</a></li>
+            <li class="nav-list-item nav-flex-item"><a href="">文章</a></li>
+            <li class="nav-list-item nav-flex-item"><a href="">关于</a></li>
         </ul>
     </nav>
 

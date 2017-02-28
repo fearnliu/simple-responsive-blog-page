@@ -13,7 +13,7 @@ handleWidthChange(mql); // 初始化，开始监听媒体查询值的变化
 
 function handleWidthChange(mql) {
     if (mql.matches) {
-        menu.style.display = 'block';
+        menu.style.display = 'flex';    /* 桌面端采用 flex 布局 */
     } else {
         if (menuIsCollapse) {
             menu.style.display = 'none';
