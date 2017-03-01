@@ -1,0 +1,44 @@
+/*
+ * 移动优先
+ * 默认在移动设备上
+ * 内边距为 20px
+ * 默认字体大小 16px，即 1rem
+ * 可以计算出文章内容最佳宽度为 685px，最佳行高为 26px
+ * 为使字体清晰可辨，设置内边距
+ */
+
+article {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    max-width: 42.8125em;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+    padding: 1.25em;
+}
+
+
+
+/*
+ * 当页面宽度在 685px 与 600px 之间
+ * 调整内边距为 40px
+ */
+
+ @media all and (min-width: 600px) and (max-width: 685px) {
+     article {
+         padding: 2.5em;
+     }
+ }
+
+
+/*
+ * 当页面宽度大于或等于 685px（符合最佳宽度条件）
+ * 将内边距设为 0
+ */
+
+ @media all and (min-width: 685px) {
+     article {
+         padding: 0;
+         margin-top: 2.5em;
+     }
+ }
