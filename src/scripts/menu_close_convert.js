@@ -29,11 +29,11 @@ btn.addEventListener('click', ()=>{
 
     if (menuIsCollapse) {   /* 菜单折叠 */
         menu.style.display = 'none';
-        btn.classList.remove('icon-close');
+        btn.classList.remove('icon-cross'); /* 使用icomoon提供的字体图标*/
         btn.classList.add('icon-menu');
     } else {
         menu.style.display = 'block';   /* 行内样式优先级高，会覆盖掉样式中的样式。带来的问题是：导航栏关闭的移动端页面切换到 PC 模式下时，导航栏将不可见 */
         btn.classList.remove('icon-menu');
-        btn.classList.add('icon-close');
+        btn.classList.add('icon-cross');
     }
 }, false);

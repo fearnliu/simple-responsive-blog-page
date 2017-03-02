@@ -37,20 +37,12 @@
 
 .menu-btn-icon {    /* 按钮图标容器*/
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     background-size: cover;
     float: left;
     cursor: pointer;
     margin-left: 10px;
-}
-
-.icon-close {    /* 导航栏关闭 */
-    background: url("../../assets/images/icon-close.png") no-repeat center center;
-}
-
-.icon-menu {    /* 导航栏展开 */
-    background: url("../../assets/images/icon-menu.png") no-repeat center center;
 }
 
 
