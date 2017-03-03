@@ -16,6 +16,10 @@
     display: block;
 }
 
+.nav-list-item:active > ul.nav-submenu-list {    /* 在移动设备上简单模拟 :hover 效果 */
+    display: block;
+}
+
 .nav-submenu-list {
     background-color: #474f5A;
     display: none;
