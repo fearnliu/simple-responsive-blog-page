@@ -1,13 +1,4 @@
 ### created by lfkid
-# 资源文件夹
-assets/
-
-# 编译生成的文件
-dist/
-
-# 引入的库文件、第三方依赖
-lib/
-vendor/
 
 # prepros配置文件
 prepros-6.config
